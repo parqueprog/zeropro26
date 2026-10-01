@@ -1,0 +1,112 @@
+<style>
+    .stylish-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: sans-serif;
+        font-size: 14px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 20px 0;
+        background-color: #ffffff;
+    }
+    .stylish-table th {
+        background: linear-gradient(135deg, #1e3a8a, #3b82f6) !important;
+        color: #ffffff !important;
+        text-align: left !important;
+        padding: 12px 16px;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+    }
+    .stylish-table td {
+        padding: 12px 16px;
+        border-bottom: 1px solid #e2e8f0;
+        color: #334155;
+        vertical-align: top;
+        text-align: left !important; /* Forces left alignment */
+    }
+    .stylish-table tr.bg-odd {
+        background-color: #ffffff !important;
+    }
+    .stylish-table tr.bg-even {
+        background-color: #f8fafc !important;
+    }
+    .stylish-table tr:hover {
+        background-color: #f1f5f9 !important;
+        transition: background-color 0.2s ease;
+    }
+    .stylish-table code {
+        background-color: #e0f2fe !important;
+        color: #0369a1 !important;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: monospace;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+</style>
+
+<table class="stylish-table">
+    <thead>
+        <tr>
+            <th>項目 / 演算子</th>
+            <th>具体例と実行結果 (ベース: <code>l = [10, 20, 30]</code>)</th>
+            <th>概要・用途</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="bg-odd">
+            <td><code>[]</code> (リスト定義)</td>
+            <td><code>l = [10, 20, 30]</code></td>
+            <td>カギ括弧を使って複数のデータをまとめて定義・管理する。</td>
+        </tr>
+        <tr class="bg-even">
+            <td><code>len()</code></td>
+            <td><code>len(l)</code> → <code>3</code></td>
+            <td>リストの要素数を取得する。</td>
+        </tr>
+        <tr class="bg-odd">
+            <td>インデキシング</td>
+            <td><code>l[0]</code> → <code>10</code></td>
+            <td>指定した位置の要素を参照・取得する（先頭は0番目）。</td>
+        </tr>
+        <tr class="bg-even">
+            <td rowspan="2">スライシング</td>
+            <td><code>l[0:2]</code> → <code>[10, 20]</code></td>
+            <td rowspan="2"><code>[開始位置 : 終了位置 : 飛び幅]</code> を指定し、要素を切り出して部分リストを取得する。</td>
+        </tr>
+        <tr class="bg-even">
+            <td><code>l[::2]</code> → <code>[10, 30]</code></td>
+        </tr>
+        <tr class="bg-odd">
+            <td><code>append</code></td>
+            <td><code>l.append(40)</code> → <code>l = [10, 20, 30, 40]</code></td>
+            <td>リストの末尾に新しい要素を追加する（破壊的変更）。</td>
+        </tr>
+        <tr class="bg-even">
+            <td><code>insert</code></td>
+            <td><code>l.insert(1, 15)</code> → <code>l = [10, 15, 20, 30]</code></td>
+            <td>指定したインデックスの位置に要素を挿入する。</td>
+        </tr>
+        <tr class="bg-odd">
+            <td><code>remove</code></td>
+            <td><code>l.remove(20)</code> → <code>l = [10, 30]</code></td>
+            <td>指定した値に一致する最初の要素を削除する。</td>
+        </tr>
+        <tr class="bg-even">
+            <td><code>+</code> 演算子</td>
+            <td><code>m = l + [40, 50]</code> → <code>m = [10, 20, 30, 40, 50]</code></td>
+            <td>2つのリストを連結して新しいリストを作る（元のリストは変化しない）。</td>
+        </tr>
+        <tr class="bg-odd">
+            <td><code>extend</code></td>
+            <td><code>l.extend([40, 50])</code> → <code>l = [10, 20, 30, 40, 50]</code></td>
+            <td>別のリストなどの要素を追加して、既存のリスト自体を拡張する。</td>
+        </tr>
+        <tr class="bg-even">
+            <td><code>in</code></td>
+            <td><code>20 in l</code> → <code>True</code></td>
+            <td>指定した値がリスト内に含まれているかを真偽値で返す。</td>
+        </tr>
+    </tbody>
+</table>
